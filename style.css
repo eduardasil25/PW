@@ -1,0 +1,183 @@
+```css
+/* GERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background: #111;
+    color: white;
+}
+
+
+/* MENU */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #000;
+    box-shadow: 0 3px 10px #000;
+}
+
+header h1 {
+    color: red;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: red;
+}
+
+
+/* BANNER */
+
+.banner {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(#0008, #600);
+}
+
+.banner h2 {
+    font-size: 50px;
+    animation: aparecer 2s;
+}
+
+.banner p {
+    margin: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    background: red;
+    color: white;
+    border: 0;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+
+/* CARROS */
+
+.carros {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.carros > h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* GRID */
+
+.lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+
+/* CARDS */
+
+.card {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px #000;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px red;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    filter: brightness(80%);
+}
+
+.card:hover img {
+    filter: brightness(110%);
+}
+
+
+/* ANIMAÇÃO */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #000;
+}
+
+
+/* TABLET */
+
+@media (max-width: 800px) {
+
+    .lista {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lista {
+        grid-template-columns: 1fr;
+    }
+
+    .banner h2 {
+        font-size: 10vw;
+    }
+}
+```
